@@ -10,6 +10,11 @@ ClapTrap::ClapTrap(std::string name) : name(name)
 	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
 }
 
+ClapTrap::ClapTrap(std::string name, int hitPoints, int energyPoints, int attackDamage) : name(name), hitPoints(hitPoints), energyPoints(energyPoints), attackDamage(attackDamage)
+{
+	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
+}
+
 ClapTrap::ClapTrap(const ClapTrap &copy)
 {
 	this->name = copy.name;
