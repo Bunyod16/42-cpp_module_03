@@ -1,8 +1,8 @@
 #include <iostream>
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 void testEnergy( void ) {
-    ScavTrap bob("testEnergy");
+    FragTrap bob("testEnergy");
 
     bob.attack("Enemy");
     bob.attack("Enemy");
@@ -18,7 +18,7 @@ void testEnergy( void ) {
 }
 
 void testHp( void ) {
-    ScavTrap bob("testHp");
+    FragTrap bob("testHp");
 
     bob.takeDamage(1);
     bob.takeDamage(3);    
@@ -28,7 +28,7 @@ void testHp( void ) {
 }
 
 void testRepair( void ) {
-    ScavTrap bob("Bob");
+    FragTrap bob("Bob");
     
     bob.takeDamage(5);
     bob.beRepaired(5);
@@ -40,8 +40,8 @@ void testRepair( void ) {
 }
 
 void testCopy( void ) {
-    ScavTrap bob("Bob");
-    ScavTrap sam("Sam");
+    FragTrap bob("Bob");
+    FragTrap sam("Sam");
 
     sam.attack("Enemy");
     sam = bob;
@@ -50,10 +50,10 @@ void testCopy( void ) {
     sam.attack("Enemy");
 }
 
-void testGuardGate( void ) {
-    ScavTrap bob("Bob");
+void testHighFive( void ) {
+    FragTrap bob("Bob");
 
-    bob.guardGate();
+    bob.highFiveGuys();
 }
 
 int main(void)
@@ -63,5 +63,5 @@ int main(void)
     testHp();
     testRepair();
     testCopy();
-    testGuardGate();
+    testHighFive();
 }
