@@ -3,9 +3,14 @@
 #include <string>
 
 // Constructors
-FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
+FragTrap::FragTrap( void ) : ClapTrap("", 100, 100, 30)
 {
 	std::cout << "\e[0;33mDefault Constructor called of FragTrap\e[0m" << std::endl;
+}
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name, 100, 100, 30)
+{
+	std::cout << "\e[0;33mConstructor called of FragTrap\e[0m" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)

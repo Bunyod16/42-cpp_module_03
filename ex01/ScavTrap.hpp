@@ -9,6 +9,7 @@ class ScavTrap : public ClapTrap
 {
 	public:
 		// Constructors
+		ScavTrap( void );
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap &copy);
 		

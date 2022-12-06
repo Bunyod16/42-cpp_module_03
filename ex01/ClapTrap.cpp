@@ -2,17 +2,26 @@
 #include <iostream>
 
 // Constructors
-ClapTrap::ClapTrap(std::string name) : name(name)
+ClapTrap::ClapTrap( void )
 {
+	name = "";
 	hitPoints = 10;
 	energyPoints = 10;
 	attackDamage = 0;
 	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
 }
 
+ClapTrap::ClapTrap(std::string name) : name(name)
+{
+	hitPoints = 10;
+	energyPoints = 10;
+	attackDamage = 0;
+	std::cout << "\e[0;33mConstructor called of ClapTrap\e[0m" << std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name, int hitPoints, int energyPoints, int attackDamage) : name(name), hitPoints(hitPoints), energyPoints(energyPoints), attackDamage(attackDamage)
 {
-	std::cout << "\e[0;33mDefault Constructor called of ClapTrap\e[0m" << std::endl;
+	std::cout << "\e[0;33mConstructor called of ClapTrap\e[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &copy)

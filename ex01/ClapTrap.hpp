@@ -8,6 +8,7 @@ class ClapTrap
 {
 	public:
 		// Constructors
+		ClapTrap( void );
 		ClapTrap(std::string name);
 		ClapTrap(std::string name, int hitPoints, int energyPoints, int attackDamage);
 		ClapTrap(const ClapTrap &copy);

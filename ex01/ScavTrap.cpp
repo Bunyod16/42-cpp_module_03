@@ -2,9 +2,14 @@
 #include <iostream>
 
 // Constructors
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
+ScavTrap::ScavTrap( void ) : ClapTrap("", 100, 50, 20)
 {
 	std::cout << "\e[0;33mDefault Constructor called of ScavTrap\e[0m" << std::endl;
+}
+
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
+{
+	std::cout << "\e[0;33mConstructor called of ScavTrap\e[0m" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
