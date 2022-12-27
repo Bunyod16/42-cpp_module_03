@@ -25,10 +25,10 @@ class ClapTrap
 		
 	private:
 		bool isActive(void);
-		std::string name;
-		int	hitPoints;
-		int	energyPoints;
-		int	attackDamage;
+		std::string _name;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
 		
 };
 

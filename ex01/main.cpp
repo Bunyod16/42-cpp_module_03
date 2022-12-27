@@ -58,7 +58,6 @@ void testGuardGate( void ) {
 
 int main(void)
 {
-
     testEnergy();
     testHp();
     testRepair();

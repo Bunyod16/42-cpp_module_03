@@ -14,10 +14,10 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
 
 ScavTrap::ScavTrap(const ScavTrap &copy) : ClapTrap(copy)
 {
-    name = copy.name;
-	hitPoints = copy.hitPoints;
-	energyPoints = copy.energyPoints;
-	attackDamage = copy.attackDamage;
+    _name = copy._name;
+	_hitPoints = copy._hitPoints;
+	_energyPoints = copy._energyPoints;
+	_attackDamage = copy._attackDamage;
 
 	std::cout << "\e[0;33mCopy Constructor called of ScavTrap\e[0m" << std::endl;
 }
@@ -32,10 +32,10 @@ ScavTrap::~ScavTrap()
 // Operators
 ScavTrap & ScavTrap::operator=(const ScavTrap &assign)
 {
-    name = assign.name;
-    hitPoints = assign.hitPoints;
-    energyPoints = assign.energyPoints;
-    attackDamage = assign.attackDamage;
+    _name = assign._name;
+    _hitPoints = assign._hitPoints;
+    _energyPoints = assign._energyPoints;
+    _attackDamage = assign._attackDamage;
 	return *this;
 }
 
@@ -43,19 +43,19 @@ ScavTrap & ScavTrap::operator=(const ScavTrap &assign)
 void	ScavTrap::guardGate( void )
 {
 	if (this->isActive() == false) {
-		std::cout << "ScavTrap " + name + " cant guard, no hitpoints and/or energy!" << std::endl;
+		std::cout << "ScavTrap " + _name + " cant guard, no hitpoints and/or energy!" << std::endl;
 		return ;
 	}
-	energyPoints--;
-	std::cout << "ScavTrap " + name + " is in guard mode!" << std::endl;
+	_energyPoints--;
+	std::cout << "ScavTrap " + _name + " is in guard mode!" << std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target)
 {
 	if (this->isActive() == false) {
-		std::cout << "ClapTrap " + name + " cant attack, no hitpoints and/or energy!" << std::endl;
+		std::cout << "ClapTrap " + _name + " cant attack, no hitpoints and/or energy!" << std::endl;
 		return ;
 	}
-	energyPoints--;
-	std::cout << "ClapTrap " + name + " attacks " + target + " causing " + std::to_string(attackDamage) + " points of damage!" << std::endl;
+	_energyPoints--;
+	std::cout << "ClapTrap " + _name + " attacks " + target + " causing " + std::to_string(_attackDamage) + " points of damage!" << std::endl;
 }

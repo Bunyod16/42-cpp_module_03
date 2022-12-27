@@ -14,7 +14,7 @@ class ClapTrap
 		ClapTrap(const ClapTrap &copy);
 		
 		// Destructor
-		~ClapTrap();
+		virtual ~ClapTrap();
 		
 		// Operators
 		ClapTrap & operator=(const ClapTrap &assign);
@@ -25,10 +25,10 @@ class ClapTrap
 		bool	isActive(void);
 	
 	protected:
-		std::string name;
-		int	hitPoints;
-		int	energyPoints;
-		int	attackDamage;
+		std::string _name;
+		int	_hitPoints;
+		int	_energyPoints;
+		int	_attackDamage;
 		
 };
 
